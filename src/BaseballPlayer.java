@@ -8,7 +8,17 @@ public abstract class BaseballPlayer {
     public BaseballPlayer(String name, int games){
         this.name = name;
         gamesPlayed = games;
+        setStat();
     }
+
+    public String toString(){
+        String result = "";
+        result += "Name: " + name;
+        result += "\nGames: " + gamesPlayed;
+        return result;
+    }
+
+    public abstract void setStat();
 
 }
 

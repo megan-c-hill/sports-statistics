@@ -5,17 +5,24 @@ public class Fielder extends BaseballPlayer{
     int assists;
     int putouts;
     int errors;
-    double fieldingPercentage;
+    String fieldingPercentage;
 
     public Fielder(String name, int gamesPlayed, int assists, int putouts, int errors){
         super(name, gamesPlayed);
         this.assists = assists;
         this.putouts = putouts;
         this.errors = errors;
-        setFieldingPercentage();
     }
 
-    private void setFieldingPercentage(){
-        fieldingPercentage = (double)(assists + putouts) / (assists + putouts + errors);
+    public void setStat(){
+        double fp = (double)(assists + putouts) / (assists + putouts + errors);
+        fieldingPercentage = String.format("%.4f", fp);
+    }
+
+    public String toString(){
+        String result = "";
+        result += super.toString();
+        result += "\nFielding Percentage: " + fieldingPercentage;
+        return result;
     }
 }
