@@ -14,7 +14,7 @@ public abstract class BaseballPlayer {
     public String toString(){
         String result = "";
         result += "Name: " + name;
-        result += "\nGames:] " + gamesPlayed;
+        result += "\nGames: " + gamesPlayed;
         return result;
     }
 
