@@ -2,11 +2,11 @@
  * Created by megansISU on 9/10/17.
  */
 public class Pitcher extends BaseballPlayer{
-    int inningsPitched;
+    double inningsPitched;
     int earnedRuns;
     String era;
 
-    public Pitcher(String name, int gamesPlayed, int inningsPitched, int earnedRuns){
+    public Pitcher(String name, int gamesPlayed, double inningsPitched, int earnedRuns){
         super(name, gamesPlayed);
         this.inningsPitched = inningsPitched;
         this.earnedRuns = earnedRuns;

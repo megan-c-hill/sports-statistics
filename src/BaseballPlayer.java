@@ -1,6 +1,7 @@
 /**
  * Created by megansISU on 9/10/17.
  */
+
 public abstract class BaseballPlayer {
     private String name;
     private int gamesPlayed;
