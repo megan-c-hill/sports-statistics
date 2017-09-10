@@ -1,3 +1,7 @@
+package com.company.Baseball;
+
+import com.company.Baseball.BaseballPlayer;
+
 /**
  * Created by megansISU on 9/10/17.
  */
@@ -10,17 +14,18 @@ public class Hitter extends BaseballPlayer {
         super(name,gamesPlayed);
         this.atBat = atBat;
         this.hits = hits;
+        setStat();
     }
 
     public void setStat(){
         double ba = (double) hits / atBat;
-        battingAve = String.format("%.4f", ba);
+        battingAve = String.format("%.3f", ba);
     }
 
     public String toString(){
         String result = "";
         result += super.toString();
-        result += "Batting Average: " + battingAve;
+        result += "\nBatting Average: " + battingAve;
         return result;
     }
 }

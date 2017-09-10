@@ -1,7 +1,9 @@
+package com.company.Baseball;
+
 /**
  * Created by megansISU on 9/10/17.
  */
-public class Pitcher extends BaseballPlayer{
+public class Pitcher extends BaseballPlayer {
     double inningsPitched;
     int earnedRuns;
     String era;
@@ -10,17 +12,18 @@ public class Pitcher extends BaseballPlayer{
         super(name, gamesPlayed);
         this.inningsPitched = inningsPitched;
         this.earnedRuns = earnedRuns;
+        setStat();
     }
 
     public void setStat(){
         double ERA = (9.0 * earnedRuns) / inningsPitched;
-        era = String.format("%.4f", ERA);
+        era = String.format("%.3f", ERA);
     }
 
     public String toString(){
         String result = "";
         result += super.toString();
-        result += "Earned Run Average: " + era;
+        result += "\nEarned Run Average: " + era;
         return result;
     }
 }

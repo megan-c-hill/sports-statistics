@@ -1,3 +1,5 @@
+package com.company.Baseball;
+
 /**
  * Created by megansISU on 9/10/17.
  */
@@ -9,7 +11,6 @@ public abstract class BaseballPlayer {
     public BaseballPlayer(String name, int games){
         this.name = name;
         gamesPlayed = games;
-        setStat();
     }
 
     public String toString(){
