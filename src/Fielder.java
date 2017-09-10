@@ -1,13 +1,14 @@
 /**
  * Created by megansISU on 9/10/17.
  */
-public class Fielder {
+public class Fielder extends BaseballPlayer{
     int assists;
     int putouts;
     int errors;
     double fieldingPercentage;
 
-    public Fielder(int assists, int putouts, int errors){
+    public Fielder(String name, int gamesPlayed, int assists, int putouts, int errors){
+        super(name, gamesPlayed);
         this.assists = assists;
         this.putouts = putouts;
         this.errors = errors;
